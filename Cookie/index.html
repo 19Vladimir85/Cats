@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="createCookie">Create cookie</button>
+</body>
+<script>
+    const button = document.querySelector("#createCookie");
+
+    button.addEventListener("click", (e) => {
+        document.cookie = "cookie=example"
+    })
+
+    const myLocalStorage = window.localStorage;
+
+    const myObj = {
+        name: "Liza",
+        age: 23,
+    }
+
+    myLocalStorage.setItem("user", JSON.stringify(myObj)) // [object Object]
+
+    console.log(myLocalStorage)
+</script>
+</html>
